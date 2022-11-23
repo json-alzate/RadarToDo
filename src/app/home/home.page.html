@@ -1,8 +1,9 @@
 <ion-content>
 
-  <ion-fab vertical="top" horizontal="start" slot="fixed" size="small">
-    <ion-fab-button color="dark" class="bnt-options">
-      <ion-icon name="menu-outline"></ion-icon>
+
+  <ion-fab vertical="top" horizontal="start" slot="fixed">
+    <ion-fab-button class="bnt-options">
+      <ion-icon name="menu-outline" color="primary"></ion-icon>
     </ion-fab-button>
   </ion-fab>
 
@@ -16,13 +17,18 @@
     </ion-fab-button>
   </ion-fab>
 
-</ion-content>
 
-<ion-footer>
-  <ion-toolbar class="ion-text-center">
-    <ion-button (click)="locateMe()" fill="clear">
-      <ion-icon name="locate-outline" slot="start"></ion-icon>
-      Locate me!
-    </ion-button>
-  </ion-toolbar>
-</ion-footer>
+
+  <swiper [slidesPerView]="2">
+    <ng-template swiperSlide>
+      <app-todo-card></app-todo-card>
+    </ng-template>
+    <ng-template swiperSlide>
+      <app-todo-card></app-todo-card>
+    </ng-template>
+    <ng-template swiperSlide>
+      <app-todo-card></app-todo-card>
+    </ng-template>
+  </swiper>
+
+</ion-content>

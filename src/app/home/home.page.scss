@@ -4,7 +4,7 @@ ion-content {
 
 .container {
   width: 100%;
-  height: 100%;
+  height: 92vh;
 }
 
 capacitor-google-map {
@@ -14,9 +14,10 @@ capacitor-google-map {
 }
 
 .bnt-options {
-  // --box-shadow: none;
+  --box-shadow: none;
+  --background: transparent;
 }
 
 .btn-add {
-  --box-shadow: none;
+  // --box-shadow: none;
 }
