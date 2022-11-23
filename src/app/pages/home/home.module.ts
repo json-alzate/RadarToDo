@@ -28,6 +28,9 @@ import * as fromComponents from './components';
   declarations: [
     HomePage,
     ...fromComponents.COMPONENTS
+  ],
+  entryComponents: [
+    ...fromComponents.ENTRY_COMPONENTS
   ]
 })
 export class HomePageModule { }

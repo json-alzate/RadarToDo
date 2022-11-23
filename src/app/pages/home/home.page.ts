@@ -265,7 +265,11 @@ export class HomePage implements OnInit {
 
   // new todo
   newTodo() {
-    this.navController.navigateForward('/todo');
+  }
+
+  // modal
+  onCloseModal() {
+    this.modalController.dismiss();
   }
 
 }
