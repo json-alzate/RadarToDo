@@ -1,0 +1,7 @@
+{
+  "name": "RadarToDo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
