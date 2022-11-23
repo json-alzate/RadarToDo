@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">RadarToDo</string>
+    <string name="title_activity_main">RadarToDo</string>
+    <string name="package_name">com.jheison.radartodo</string>
+    <string name="custom_url_scheme">com.jheison.radartodo</string>
+</resources>
