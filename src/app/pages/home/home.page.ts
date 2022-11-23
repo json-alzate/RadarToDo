@@ -1,20 +1,34 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
 import { GoogleMap, Marker } from '@capacitor/google-maps';
 import { Geolocation } from '@capacitor/geolocation';
-import { ModalController } from '@ionic/angular';
-import { environment } from '../../environments/environment';
+import { ModalController, NavController } from '@ionic/angular';
+import { environment } from '../../../environments/environment';
+
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage {
+export class HomePage implements OnInit {
 
   @ViewChild('map') mapRef!: ElementRef<HTMLElement>;
   map!: GoogleMap;
 
-  constructor(private modalController: ModalController) { }
+  constructor(
+    private modalController: ModalController,
+    private navController: NavController
+  ) {
+    console.log('constructor');
+
+  }
+
+  ngOnInit(): void {
+    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    //Add 'implements OnInit' to the class.
+    console.log('ngOnInit');
+
+  }
 
   ionViewDidEnter() {
     // Probably not necessary in the future
@@ -247,6 +261,11 @@ export class HomePage {
         zoom: 12,
       });
     }
+  }
+
+  // new todo
+  newTodo() {
+    this.navController.navigateForward('/todo');
   }
 
 }
